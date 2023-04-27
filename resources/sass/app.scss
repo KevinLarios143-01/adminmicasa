@@ -1,8 +1,26 @@
 // Fonts
-@import url('https://fonts.bunny.net/css?family=Almarai');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+//@import url('https://fonts.bunny.net/css?family=Nunito');
 
 // Variables
-@import 'variables';
+//@import 'variables';
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+//@import 'bootstrap/scss/bootstrap';
+
+//MDB
+// -- MDB CSS --
+
+//@import 'mdb-ui-kit/css/mdb.min.css';
+
+// -- MDB SCSS --
+
+@import 'mdb-ui-kit/src/scss/mdb.free';
+
+// -- FONTAWESOME SCSS --
+// importing core styling file
+@import "./fontawesome/scss/fontawesome.scss";
+
+// our project needs Solid + Brands
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";

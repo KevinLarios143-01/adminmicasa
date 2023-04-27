@@ -11,7 +11,8 @@
             @endif
 
             {{ __('You are logged in!') }}
-            <example-component/>
+            <router-view></router-view>
+
     </div>
 </div>
 @endsection
