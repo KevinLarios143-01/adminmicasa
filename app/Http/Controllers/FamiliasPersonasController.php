@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\FamiliasPersonas;
+use App\Http\Requests\StoreFamiliasPersonasRequest;
+use App\Http\Requests\UpdateFamiliasPersonasRequest;
 
-class EstadoController extends Controller
+class FamiliasPersonasController extends Controller
 {
-    //
-        /**
+    /**
      * Display a listing of the resource.
      */
     public function index()
@@ -26,7 +27,7 @@ class EstadoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePruebaRequest $request)
+    public function store(StoreFamiliasPersonasRequest $request)
     {
         //
     }
@@ -34,7 +35,7 @@ class EstadoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Prueba $prueba)
+    public function show(FamiliasPersonas $familiasPersonas)
     {
         //
     }
@@ -42,7 +43,7 @@ class EstadoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Prueba $prueba)
+    public function edit(FamiliasPersonas $familiasPersonas)
     {
         //
     }
@@ -50,7 +51,7 @@ class EstadoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePruebaRequest $request, Prueba $prueba)
+    public function update(UpdateFamiliasPersonasRequest $request, FamiliasPersonas $familiasPersonas)
     {
         //
     }
@@ -58,7 +59,7 @@ class EstadoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Prueba $prueba)
+    public function destroy(FamiliasPersonas $familiasPersonas)
     {
         //
     }

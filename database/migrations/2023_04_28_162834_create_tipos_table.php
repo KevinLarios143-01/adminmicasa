@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('familias', function (Blueprint $table) {
+        Schema::create('tipos', function (Blueprint $table) {
             $table->id('id');
-            $table->string('apellidos');
-            $table->string('direccion');
-            $table->datetime('aniversario');
-            $table->datetime('fecha');
-            $table->integer('estadocivil');
-            $table->foreign('estadocivil')->references('id')->on('estadocivils');
+            $table->string('tipo');
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('familias');
+        Schema::dropIfExists('tipos');
     }
 };

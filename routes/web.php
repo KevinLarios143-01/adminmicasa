@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+//use User;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +21,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/{any}', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/manis', function(){
+
+   $users = User::all();
+    //$users = DB::table('users')->where('id', 1)->first();
+    dd($users);
+});
 /*
 Route::get('/{any}', function () {
     return view('archis');

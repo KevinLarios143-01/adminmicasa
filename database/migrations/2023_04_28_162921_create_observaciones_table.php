@@ -12,8 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('observaciones', function (Blueprint $table) {
-            $table->id();
+            $table->id('id');
+            $table->string('texto');
+            $table->datetime('fecha', $precision = 0);
+            $table->integer('tipo');
+            $table->integer('estado');
+            $table->integer('familia');
             $table->timestamps();
+            $table->foreign('tipo')->references('id')->on('tipos');
+            $table->foreign('estado')->references('id')->on('estados');
+            $table->foreign('familia')->references('id')->on('familias');
         });
     }
 

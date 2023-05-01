@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Prueba;
+use App\Http\Requests\StorePruebaRequest;
+use App\Http\Requests\UpdatePruebaRequest;
 
-class EstadoController extends Controller
+class PruebaController extends Controller
 {
-    //
-        /**
+    /**
      * Display a listing of the resource.
      */
     public function index()
